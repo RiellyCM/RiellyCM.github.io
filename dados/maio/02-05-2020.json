@@ -1,0 +1,26 @@
+{
+"data": "02-05-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-totaliza-23-obitos-confirmados-com-o-novo-coronavirus/",
+"confirmados":
+    {
+      "total": 158,
+      "obitos": 23,
+      "recuperados": 124,
+      "internados":
+            {
+              "uti": 6,
+              "total": 11
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 3,
+       "descartados": 597,
+       "aguardamResultado": 128,
+       "internados":
+          {
+            "uti": 9,
+            "total": 43
+          }
+   }
+}

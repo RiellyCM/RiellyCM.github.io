@@ -1,0 +1,26 @@
+{
+"data": "18-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-ja-soma-11-obitos-confirmados-com-a-covid-19/",
+"confirmados":
+    {
+      "total": 62,
+      "obitos": 11,
+      "recuperados": 40,
+      "internados":
+            {
+              "uti": 0,
+              "total": 11
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 7,
+       "descartados": 271,
+       "aguardamResultado": 251,
+       "internados":
+          {
+            "uti": 1,
+            "total": 32
+          }
+   }
+}

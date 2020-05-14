@@ -1,0 +1,26 @@
+{
+"data": "11-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/numero-de-casos-confirmados-da-covid-19-chega-a-35-em-sorocaba/",
+"confirmados":
+    {
+      "total": 35,
+      "obitos": 3,
+      "recuperados": 25,
+      "internados":
+            {
+              "uti": 0,
+              "total": 7
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 15,
+       "descartados": 115,
+       "aguardamResultado": 345,
+       "internados":
+          {
+            "uti": 17,
+            "total": 58
+          }
+   }
+}

@@ -1,0 +1,26 @@
+{
+"data": "19-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/obitos-confirmados-com-a-covid-19-chega-a-12-em-sorocaba/",
+"confirmados":
+    {
+      "total": 65,
+      "obitos": 12,
+      "recuperados": 42,
+      "internados":
+            {
+              "uti": 0,
+              "total": 11
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 5,
+       "descartados": 323,
+       "aguardamResultado": 216,
+       "internados":
+          {
+            "uti": 6,
+            "total": 50
+          }
+   }
+}

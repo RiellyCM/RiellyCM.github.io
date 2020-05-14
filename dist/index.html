@@ -1,0 +1,40 @@
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Dados coronavírus na cidade de Sorocaba </title>
+    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densityDpi=device-dpi" />
+  </head>
+
+<body>
+  <header class="header">
+
+    <section class="header-section__principal">
+       <img class="image-covid" src="https://image.flaticon.com/icons/svg/2860/2860789.svg">
+      </section>
+
+    <section class="header-section__subtitles">
+        <h1 class="title-covid"> Novo Coronavírus (COVID-19) </h1>
+        <p class="subtitle-covid"> O mundo enfrenta a pandemia de infecções respiratórias ocasionadas pelo novo coronavírus. Veja a progressão da doença na cidade de Sorocaba: </p>
+    </section>
+  </header>
+
+  <section class="graphic-covid">
+    <canvas id="myChart"></canvas>
+  </section>
+
+  <footer class="footer">
+    <p class="footer-referencia__title">
+Referências </p>
+    <ul class="footer-referencia__item">
+      <li> Prefeitura de Sorocaba <br/>
+        <a class="ancoras" href="https://www.instagram.com/prefeituradesorocaba/">  Instagram </a> <br/>
+        <a class="ancoras" href="http://www.sorocaba.sp.gov.br/"> Site oficial </a>
+      </li>
+    </ul>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!-- É necessario colocar a bilioteca antes de chamar o js -->
+  <script src="main.js"></script>
+  <!-- esse arquivo é gerado pelo webpack. Por esse motivo eu posso tirar o arquivo js original-->
+</body>

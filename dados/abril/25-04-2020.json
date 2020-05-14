@@ -1,0 +1,26 @@
+{
+"data": "25-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-registra-99-casos-confirmados-do-novo-coronavirus/",
+"confirmados":
+    {
+      "total": 99,
+      "obitos": 18,
+      "recuperados": 65,
+      "internados":
+            {
+              "uti": 0,
+              "total": 16
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 5,
+       "descartados": 491,
+       "aguardamResultado": 87,
+       "internados":
+          {
+            "uti": 10,
+            "total": 33
+          }
+   }
+}

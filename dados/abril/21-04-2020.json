@@ -1,0 +1,26 @@
+{
+"data": "21-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-mantem-numero-de-casos-confirmados-do-novo-coronavirus-em-71-nesta-terca-feira/",
+"confirmados":
+    {
+      "total": 71,
+      "obitos": 13,
+      "recuperados": 44,
+      "internados":
+            {
+              "uti": 0,
+              "total": 14
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 7,
+       "descartados": 355,
+       "aguardamResultado": 206,
+       "internados":
+          {
+            "uti": 7,
+            "total": 54
+          }
+   }
+}

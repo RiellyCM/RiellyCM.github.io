@@ -1,0 +1,26 @@
+{
+"data": "07-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-tem-mais-um-caso-confirmado-da-covid-19-ja-sao-26/",
+"confirmados":
+    {
+      "total": 26,
+      "obitos": 3,
+      "recuperados": 18,
+      "internados":
+            {
+              "uti": 0,
+              "total": 5
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 18,
+       "descartados": 73,
+       "aguardamResultado": 344,
+       "internados":
+          {
+            "uti": 10,
+            "total": 50
+          }
+   }
+}

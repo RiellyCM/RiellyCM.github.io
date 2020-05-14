@@ -1,0 +1,26 @@
+{
+"data": "15-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-confirma-mais-dois-obitos-com-a-covid-19-total-chega-a-7/",
+"confirmados":
+    {
+      "total": 52,
+      "obitos": 7,
+      "recuperados": 36,
+      "internados":
+            {
+              "uti": 0,
+              "total": 9
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 10,
+       "descartados": 191,
+       "aguardamResultado": 303,
+       "internados":
+          {
+            "uti": 7,
+            "total": 39
+          }
+   }
+}

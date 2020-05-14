@@ -1,0 +1,26 @@
+{
+"data": "04-05-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-mantem-numero-de-casos-confirmados-do-novo-coronavirus-em-159-nesta-segunda-feira/",
+"confirmados":
+    {
+      "total": 159,
+      "obitos": 23,
+      "recuperados": 124,
+      "internados":
+            {
+              "uti": 7,
+              "total": 12
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 7,
+       "descartados": 640,
+       "aguardamResultado": 145,
+       "internados":
+          {
+            "uti": 7,
+            "total": 48
+          }
+   }
+}

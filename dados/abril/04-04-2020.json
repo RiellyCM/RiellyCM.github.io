@@ -1,0 +1,26 @@
+{
+"data": "04-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-registra-22-casos-confirmados-da-covid-19/",
+"confirmados":
+    {
+      "total": 22,
+      "obitos": 3,
+      "recuperados": 10,
+      "internados":
+            {
+              "uti": 0,
+              "total": 9
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 12,
+       "descartados": 55,
+       "aguardamResultado": 312,
+       "internados":
+          {
+            "uti": 12,
+            "total": 46
+          }
+   }
+}

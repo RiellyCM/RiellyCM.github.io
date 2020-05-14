@@ -1,0 +1,26 @@
+{
+"data": "31-03-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sobe-para-11-o-numero-de-casos-confirmados-do-novo-coronavirus-em-sorocaba/",
+"confirmados":
+    {
+      "total": 11,
+      "obitos": 1,
+      "recuperados": 0,
+      "internados":
+            {
+              "uti": 0,
+              "total": 8
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 8,
+       "descartados": 42,
+       "aguardamResultado": 246,
+       "internados":
+          {
+            "uti": 15,
+            "total": 51
+          }
+   }
+}

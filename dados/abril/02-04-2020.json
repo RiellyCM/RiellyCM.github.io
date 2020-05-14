@@ -1,0 +1,26 @@
+{
+"data": "02-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-contabiliza-16-casos-confirmados-do-novo-coronavirus/",
+"confirmados":
+    {
+      "total": 16,
+      "obitos": 2,
+      "recuperados": 6,
+      "internados":
+            {
+              "uti": 0,
+              "total": 8
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 10,
+       "descartados": 50,
+       "aguardamResultado": 277,
+       "internados":
+          {
+            "uti": 15,
+            "total": 44
+          }
+   }
+}

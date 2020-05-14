@@ -1,0 +1,26 @@
+{
+"data": "28-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-totaliza-137-casos-confirmados-do-novo-coronavirus/",
+"confirmados":
+    {
+      "total": 137,
+      "obitos": 21,
+      "recuperados": 79,
+      "internados":
+            {
+              "uti": 7,
+              "total": 18
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 4,
+       "descartados": 543,
+       "aguardamResultado": 103,
+       "internados":
+          {
+            "uti": 13,
+            "total": 35
+          }
+   }
+}

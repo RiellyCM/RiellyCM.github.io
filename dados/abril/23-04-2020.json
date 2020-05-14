@@ -1,0 +1,26 @@
+{
+"data": "23-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sobe-para-16-o-numero-de-mortes-confirmadas-com-a-covid-19-em-sorocaba/",
+"confirmados":
+    {
+      "total": 79,
+      "obitos": 16,
+      "recuperados": 53,
+      "internados":
+            {
+              "uti": 0,
+              "total": 10
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 5,
+       "descartados": 461,
+       "aguardamResultado": 120,
+       "internados":
+          {
+            "uti": 8,
+            "total": 31
+          }
+   }
+}

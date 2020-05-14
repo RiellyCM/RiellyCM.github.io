@@ -1,0 +1,26 @@
+{
+"data": "24-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-registra-total-de-18-mortes-pela-covid-19/",
+"confirmados":
+    {
+      "total": 93,
+      "obitos": 18,
+      "recuperados": 59,
+      "internados":
+            {
+              "uti": 0,
+              "total": 16
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 5,
+       "descartados": 483,
+       "aguardamResultado": 80,
+       "internados":
+          {
+            "uti": 7,
+            "total": 28
+          }
+   }
+}

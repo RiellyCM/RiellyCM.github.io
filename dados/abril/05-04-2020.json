@@ -1,0 +1,26 @@
+{
+"data": "05-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-contabiliza-mais-um-novo-caso-confirmado-da-covid-19-e-o-total-chega-a-23/",
+"confirmados":
+    {
+      "total": 23,
+      "obitos": 3,
+      "recuperados": 11,
+      "internados":
+            {
+              "uti": 0,
+              "total": 9
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 14,
+       "descartados": 55,
+       "aguardamResultado": 330,
+       "internados":
+          {
+            "uti": 12,
+            "total": 59
+          }
+   }
+}

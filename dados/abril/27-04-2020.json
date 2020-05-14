@@ -1,0 +1,26 @@
+{
+"data": "27-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-registra-mais-tres-novos-obitos-pela-covid-19-total-vai-a-21/",
+"confirmados":
+    {
+      "total": 118,
+      "obitos": 21,
+      "recuperados": 79,
+      "internados":
+            {
+              "uti": 7,
+              "total": 18
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 4,
+       "descartados": 525,
+       "aguardamResultado": 116,
+       "internados":
+          {
+            "uti": 14,
+            "total": 45
+          }
+   }
+}

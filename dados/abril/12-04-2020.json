@@ -1,0 +1,26 @@
+{
+"data": "12-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/mais-um-novo-caso-da-covid-19-e-confirmado-neste-domingo-total-chega-a-36/",
+"confirmados":
+    {
+      "total": 36,
+      "obitos": 3,
+      "recuperados": 26,
+      "internados":
+            {
+              "uti": 0,
+              "total": 7
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 15,
+       "descartados": 131,
+       "aguardamResultado": 336,
+       "internados":
+          {
+            "uti": 17,
+            "total": 64
+          }
+   }
+}

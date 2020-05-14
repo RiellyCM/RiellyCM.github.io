@@ -1,0 +1,26 @@
+{
+"data": "14-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/quinta-morte-e-confirmada-com-o-novo-coronavirus-em-sorocaba/",
+"confirmados":
+    {
+      "total": 42,
+      "obitos": 5,
+      "recuperados": 31,
+      "internados":
+            {
+              "uti": 0,
+              "total": 6
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 13,
+       "descartados": 145,
+       "aguardamResultado": 339,
+       "internados":
+          {
+            "uti": 12,
+            "total": 46
+          }
+   }
+}

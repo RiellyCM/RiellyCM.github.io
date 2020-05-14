@@ -1,0 +1,26 @@
+{
+"data": "10-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-mantem-numero-de-casos-confirmados-do-novo-coronavirus-em-32-nesta-sexta-feira/",
+"confirmados":
+    {
+      "total": 32,
+      "obitos": 3,
+      "recuperados": 22,
+      "internados":
+            {
+              "uti": 0,
+              "total": 7
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 19,
+       "descartados": 92,
+       "aguardamResultado": 361,
+       "internados":
+          {
+            "uti": 17,
+            "total": 58
+          }
+   }
+}

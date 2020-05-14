@@ -1,0 +1,26 @@
+{
+"data": "03-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sobe-para-20-o-numero-de-casos-confirmados-do-novo-coronavirus-em-sorocaba/",
+"confirmados":
+    {
+      "total": 20,
+      "obitos": 3,
+      "recuperados": 8,
+      "internados":
+            {
+              "uti": 0,
+              "total": 9
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 13,
+       "descartados": 54,
+       "aguardamResultado": 292,
+       "internados":
+          {
+            "uti": 10,
+            "total": 44
+          }
+   }
+}

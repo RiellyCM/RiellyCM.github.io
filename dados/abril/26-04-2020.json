@@ -1,0 +1,26 @@
+{
+"data": "26-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/casos-confirmados-do-novo-coronavirus-chega-a-104-em-sorocaba/",
+"confirmados":
+    {
+      "total": 104,
+      "obitos": 18,
+      "recuperados": 70,
+      "internados":
+            {
+              "uti": 0,
+              "total": 16
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 5,
+       "descartados": 516,
+       "aguardamResultado": 77,
+       "internados":
+          {
+            "uti": 12,
+            "total": 45
+          }
+   }
+}

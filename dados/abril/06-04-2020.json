@@ -1,0 +1,26 @@
+{
+"data": "06-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-totaliza-25-casos-confirmados-do-novo-coronavirus/",
+"confirmados":
+    {
+      "total": 25,
+      "obitos": 3,
+      "recuperados": 17,
+      "internados":
+            {
+              "uti": 0,
+              "total": 5
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 16,
+       "descartados": 62,
+       "aguardamResultado": 336,
+       "internados":
+          {
+            "uti": 12,
+            "total": 40
+          }
+   }
+}

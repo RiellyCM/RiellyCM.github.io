@@ -1,0 +1,87 @@
+    body {
+        font-family: 'proxima-nova', semi-bold;
+        background-color: #8A2BE2;
+        background-repeat: no-repeat;
+        color: #FFFAF0;
+        position: relative;
+        margin: 0;
+    }
+
+    @media (min-width:600px) {
+        position: relative;
+        height: 100vh;
+    }
+
+    body::before {
+        position: absolute;
+        background-color: rgba(0,0,0,0.2);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        content:"";
+    }
+
+
+        @media (min-width:600px) {
+          .header {
+            display: flex;
+        }
+    }
+
+    .header-section__principal {
+          display: flex;
+    }
+
+    .image-covid {
+        width: 90px;
+        height: 90px;
+        padding: 20px;
+        display: flex;
+        margin: auto;
+   }
+
+    .header-section__subtitles {
+          @media (min-width:600px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5px;
+          }
+        }
+
+    .title-covid {
+        text-align: center;
+        letter-spacing: 2px;
+        font-size: 30px;
+        margin-top: 30px;
+        text-transform: uppercase;
+        color: #FF8C00;
+    }
+
+    .subtitle-covid {
+        text-align: center;
+        letter-spacing: 1px;
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: normal;
+        margin-top: 30px;
+        display: flex;
+    }
+
+
+    .graphic-covid {
+        background-color: #FFFAF0;
+
+    }
+
+
+    .footer-referencia__title {
+        font-size: 17px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .ancoras {
+      text-decoration: none;
+      color: #FF8C00;
+    }

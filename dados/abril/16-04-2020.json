@@ -1,0 +1,26 @@
+{
+"data": "16-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/oitavo-obito-e-confirmado-com-a-covid-19-em-sorocaba/",
+"confirmados":
+    {
+      "total": 58,
+      "obitos": 8,
+      "recuperados": 38,
+      "internados":
+            {
+              "uti": 0,
+              "total": 12
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 11,
+       "descartados": 210,
+       "aguardamResultado": 295,
+       "internados":
+          {
+            "uti": 5,
+            "total": 34
+          }
+   }
+}

@@ -1,0 +1,25 @@
+{
+"data": "21-03-2020",
+"fonte": "https://www.instagram.com/p/B-AetLgl9QX/",
+"confirmados":
+    {
+      "obitos": 0,
+      "recuperados": 0,
+      "internados":
+            {
+              "uti": 0,
+              "total": 0
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 0,
+       "descartados": 13,
+       "aguardamResultado": 84,
+       "internados":
+          {
+            "uti": 0,
+            "total": 0
+          }
+   }
+}

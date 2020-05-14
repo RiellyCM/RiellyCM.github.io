@@ -1,0 +1,26 @@
+{
+"data": "05-05-2020",
+"fonte": "",
+"confirmados":
+    {
+      "total": 172,
+      "obitos": 23,
+      "recuperados": 138,
+      "internados":
+            {
+              "uti": 6,
+              "total": 11
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 8,
+       "descartados": 670,
+       "aguardamResultado": 132,
+       "internados":
+          {
+            "uti": 11,
+            "total": 33
+          }
+   }
+}

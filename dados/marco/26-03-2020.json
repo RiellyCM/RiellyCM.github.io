@@ -1,0 +1,26 @@
+{
+"data": "26-03-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/segundo-caso-do-novo-coronavirus-e-confirmado-em-sorocaba/",
+"confirmados":
+    {
+      "total": 2,
+      "obitos": 0,
+      "recuperados": 0,
+      "internados":
+            {
+              "uti": 0,
+              "total": 0
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 4,
+       "descartados": 18,
+       "aguardamResultado": 195,
+       "internados":
+          {
+            "uti": 0,
+            "total": 28
+          }
+   }
+}

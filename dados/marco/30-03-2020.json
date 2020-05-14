@@ -1,0 +1,26 @@
+{
+"data": "30-03-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/chega-a-seis-numero-de-obitos-suspeitos-da-covid-19-em-sorocaba/",
+"confirmados":
+    {
+      "total": 3,
+      "obitos": 1,
+      "recuperados": 0,
+      "internados":
+            {
+              "uti": 0,
+              "total": 0
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 6,
+       "descartados": 31,
+       "aguardamResultado": 244,
+       "internados":
+          {
+            "uti": 15,
+            "total": 51
+          }
+   }
+}

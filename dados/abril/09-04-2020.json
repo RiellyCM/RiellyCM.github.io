@@ -1,0 +1,26 @@
+{
+"data": "09-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-tem-mais-um-novo-caso-confirmado-da-covid-19-total-chega-a-32/",
+"confirmados":
+    {
+      "total": 32,
+      "obitos": 3,
+      "recuperados": 22,
+      "internados":
+            {
+              "uti": 0,
+              "total": 7
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 17,
+       "descartados": 92,
+       "aguardamResultado": 345,
+       "internados":
+          {
+            "uti": 15,
+            "total": 53
+          }
+   }
+}

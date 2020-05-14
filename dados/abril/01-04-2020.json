@@ -1,0 +1,26 @@
+{
+"data": "01-04-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-registra-14-casos-confirmados-da-covid-19-e-uma-morte/",
+"confirmados":
+    {
+      "total": 14,
+      "obitos": 2,
+      "recuperados": 2,
+      "internados":
+            {
+              "uti": 0,
+              "total": 8
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 9,
+       "descartados": 44,
+       "aguardamResultado": 276,
+       "internados":
+          {
+            "uti": 15,
+            "total": 53
+          }
+   }
+}
