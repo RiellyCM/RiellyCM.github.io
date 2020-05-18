@@ -74,9 +74,13 @@ const files = [
       return file.confirmados.obitos || "0";
     });
 
+    const ObitoSuspeitos = files.map((file) => {
+      return file.suspeitos.obitos || "0";
+    });
 
 var graficoCasosConfirmados = document.querySelector('#total-de-casos-confirmados').getContext('2d');
 var graficoMortes = document.querySelector('#total-de-mortes').getContext('2d');
+var graficoDadosCombinados = document.querySelector('#combinacao-obitos-suspeitos-confirmados-e-totais').getContext('2d');
 
 new Chart(graficoCasosConfirmados, {
     // The type of chart we want to create
@@ -107,16 +111,40 @@ new Chart(graficoMortes, {
 
   // The data for our dataset
   data: {
-      labels,
+      labels: labels,
       datasets: [
       {
           label: 'Número total de óbitos confirmados',
           backgroundColor: '#fff',
           borderColor: 'rgb(255, 99, 132)',
-          files,
           data: ObitosConfirmados,
       }
     ]
+  },
+
+  // Configuration options go here
+  options: {}
+});
+
+new Chart(graficoDadosCombinados, {
+  // The type of chart we want to create
+  type: 'line',
+
+  // The data for our dataset
+  data: {
+      labels: labels,
+      datasets: [
+        {
+          label: 'óbitos confirmados',
+          borderColor: 'rgb(255, 99, 132)',
+          data: ObitosConfirmados,
+        },
+        {
+          label: 'óbitos suspeitos',
+          borderColor: '#10107d',
+          data: ObitoSuspeitos,
+        },
+      ]
   },
 
   // Configuration options go here
