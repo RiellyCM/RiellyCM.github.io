@@ -66,6 +66,10 @@ const files = [
       return file.data;
     });
 
+    const RecuperadosConfirmados = files.map((file) => {
+      return file.confirmados.recuperados || "0";
+    });
+
     const TotalConfirmados = files.map((file) => {
       return file.confirmados.total || "0";
     });
@@ -78,9 +82,12 @@ const files = [
       return file.suspeitos.obitos || "0";
     });
 
+
+
 var graficoCasosConfirmados = document.querySelector('#total-de-casos-confirmados').getContext('2d');
 var graficoMortes = document.querySelector('#total-de-mortes').getContext('2d');
 var graficoDadosCombinados = document.querySelector('#combinacao-obitos-suspeitos-confirmados-e-totais').getContext('2d');
+var graficoRecuperados = document.querySelector('#total-de-casos-recuperados').getContext('2d');
 
 new Chart(graficoCasosConfirmados, {
     // The type of chart we want to create
@@ -136,7 +143,7 @@ new Chart(graficoDadosCombinados, {
       datasets: [
         {
           label: 'óbitos confirmados',
-          borderColor: 'rgb(255, 99, 132)',
+          borderColor: '#ff6384',
           data: ObitosConfirmados,
         },
         {
@@ -144,9 +151,40 @@ new Chart(graficoDadosCombinados, {
           borderColor: '#10107d',
           data: ObitoSuspeitos,
         },
+        {
+          label: 'Total de Casos confirmados',
+          borderColor: '#89389c',
+          data: TotalConfirmados,
+        }
       ]
   },
 
   // Configuration options go here
   options: {}
 });
+
+new Chart(graficoRecuperados, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: labels,
+
+        datasets: [
+        {
+            label: 'casos recuperados confirmados',
+            borderColor: '#052b52',
+            data: RecuperadosConfirmados,
+        },
+        {
+            label: 'casos confirmados',
+            borderColor: '#1d7a06',
+            data: TotalConfirmados,
+        }
+      ]
+    },
+
+    // Configuration options go here
+    options: {}
+  });
