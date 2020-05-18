@@ -1,0 +1,26 @@
+{
+"data": "15-05-2020",
+"fonte": "https://www.instagram.com/p/CAON5bggUIQ/",
+"confirmados":
+    {
+      "total": 381,
+      "obitos": 29,
+      "recuperados": 328,
+      "internados":
+            {
+              "uti": 10,
+              "total": 24
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 4,
+       "descartados": 1054,
+       "aguardamResultado": 186,
+       "internados":
+          {
+            "uti": 14,
+            "total": 69
+          }
+   }
+}

@@ -1,0 +1,26 @@
+{
+"data": "13-05-2020",
+"fonte": "https://www.instagram.com/p/CAJCBosAavy/",
+"confirmados":
+    {
+      "total": 333,
+      "obitos": 29,
+      "recuperados": 285,
+      "internados":
+            {
+              "uti": 7,
+              "total": 19
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 5,
+       "descartados": 970,
+       "aguardamResultado": 138,
+       "internados":
+          {
+            "uti": 12,
+            "total": 45
+          }
+   }
+}

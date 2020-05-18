@@ -1,0 +1,26 @@
+{
+"data": "14-05-2020",
+"fonte": "https://www.instagram.com/p/CALsnP_HZAK/",
+"confirmados":
+    {
+      "total": 362,
+      "obitos": 29,
+      "recuperados": 310,
+      "internados":
+            {
+              "uti": 9,
+              "total": 23
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 5,
+       "descartados": 999,
+       "aguardamResultado": 159,
+       "internados":
+          {
+            "uti": 14,
+            "total": 56
+          }
+   }
+}
