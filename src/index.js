@@ -62,19 +62,23 @@ const files = [
     require("../dados/maio/17-05-2020.json"),
     ];
 
+    const labels = files.map((file) => {
+      return file.data;
+    });
 
     const TotalConfirmados = files.map((file) => {
       return file.confirmados.total || "0";
     });
 
-    const labels = files.map((file) => {
-      return file.data;
+    const ObitosConfirmados = files.map((file) => {
+      return file.confirmados.obitos || "0";
     });
 
-    console.log(labels);
 
-var ctx = document.getElementById('myChart').getContext('2d');
-var chart = new Chart(ctx, {
+var graficoCasosConfirmados = document.querySelector('#total-de-casos-confirmados').getContext('2d');
+var graficoMortes = document.querySelector('#total-de-mortes').getContext('2d');
+
+new Chart(graficoCasosConfirmados, {
     // The type of chart we want to create
     type: 'line',
 
@@ -95,4 +99,26 @@ var chart = new Chart(ctx, {
 
     // Configuration options go here
     options: {}
+});
+
+new Chart(graficoMortes, {
+  // The type of chart we want to create
+  type: 'line',
+
+  // The data for our dataset
+  data: {
+      labels,
+      datasets: [
+      {
+          label: 'Número total de óbitos confirmados',
+          backgroundColor: '#fff',
+          borderColor: 'rgb(255, 99, 132)',
+          files,
+          data: ObitosConfirmados,
+      }
+    ]
+  },
+
+  // Configuration options go here
+  options: {}
 });
