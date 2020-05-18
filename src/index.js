@@ -61,7 +61,17 @@ const files = [
     require("../dados/maio/16-05-2020.json"),
     require("../dados/maio/17-05-2020.json"),
     ];
-    console.log(files);
+
+
+    const TotalConfirmados = files.map((file) => {
+      return file.confirmados.total || "0";
+    });
+
+    const labels = files.map((file) => {
+      return file.data;
+    });
+
+    console.log(labels);
 
 var ctx = document.getElementById('myChart').getContext('2d');
 var chart = new Chart(ctx, {
@@ -70,14 +80,15 @@ var chart = new Chart(ctx, {
 
     // The data for our dataset
     data: {
-        labels: [],
+        labels: labels,
 
         datasets: [
         {
             label: 'Número total de casos confirmados',
             backgroundColor: '#fff',
             borderColor: 'rgb(255, 99, 132)',
-            data: files,
+            data: TotalConfirmados,
+            //Aqui vai os valores que eu quero que apareçam no gráfico.
         }
       ]
     },
