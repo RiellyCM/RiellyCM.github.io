@@ -60,6 +60,8 @@ const files = [
     require("../dados/maio/15-05-2020.json"),
     require("../dados/maio/16-05-2020.json"),
     require("../dados/maio/17-05-2020.json"),
+    require("../dados/maio/18-05-2020.json"),
+    require("../dados/maio/19-05-2020.json"),
     ];
 
     const labels = files.map((file) => {

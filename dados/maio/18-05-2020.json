@@ -1,0 +1,26 @@
+{
+"data": "18-05-2020",
+"fonte": "https://www.instagram.com/p/CAWA_ZLF_g3/",
+"confirmados":
+    {
+      "total": 429,
+      "obitos": 29,
+      "recuperados": 370,
+      "internados":
+            {
+              "uti": 17,
+              "total": 30
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 6,
+       "descartados": 1141,
+       "aguardamResultado": 179,
+       "internados":
+          {
+            "uti": 13,
+            "total": 67
+          }
+   }
+}
