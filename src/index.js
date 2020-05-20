@@ -219,6 +219,16 @@ new Chart(graficoRecuperados, {
               label: 'Casos confirmados internados em UTI',
               borderColor: '#035c1c',
               data: InternadosUti,
+          },
+          {
+              label: 'Obitos confirmados',
+              borderColor: '#800903',
+              data: ObitosConfirmados,
+          },
+          {
+              label: 'Confirmados recuperados',
+              borderColor: '#e3be29',
+              data: RecuperadosConfirmados,
           }
         ]
     },
