@@ -80,9 +80,18 @@ const files = [
       return file.confirmados.obitos || "0";
     });
 
+    const InternadosTotal = files.map((file) => {
+      return file.confirmados.internados.total || "0";
+    });
+
+    const InternadosUti = files.map((file) => {
+      return file.confirmados.internados.uti || "0";
+    });
+
     const ObitoSuspeitos = files.map((file) => {
       return file.suspeitos.obitos || "0";
     });
+
 
 
 
@@ -90,6 +99,7 @@ var graficoCasosConfirmados = document.querySelector('#total-de-casos-confirmado
 var graficoMortes = document.querySelector('#total-de-mortes').getContext('2d');
 var graficoDadosCombinados = document.querySelector('#combinacao-obitos-suspeitos-confirmados-e-totais').getContext('2d');
 var graficoRecuperados = document.querySelector('#total-de-casos-recuperados').getContext('2d');
+var graficoCasosInternados = document.querySelector('#total-de-casos-internados').getContext('2d');
 
 new Chart(graficoCasosConfirmados, {
     // The type of chart we want to create
@@ -185,6 +195,32 @@ new Chart(graficoRecuperados, {
             data: TotalConfirmados,
         }
       ]
+    },
+
+    // Configuration options go here
+    options: {}
+  });
+
+  new Chart(graficoCasosInternados, {
+      // The type of chart we want to create
+      type: 'line',
+
+      // The data for our dataset
+      data: {
+          labels: labels,
+
+          datasets: [
+          {
+              label: 'Casos confirmados internados',
+              borderColor: '#030a5c',
+              data: InternadosTotal,
+          },
+          {
+              label: 'Casos confirmados internados em UTI',
+              borderColor: '#035c1c',
+              data: InternadosUti,
+          }
+        ]
     },
 
     // Configuration options go here
