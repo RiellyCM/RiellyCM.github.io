@@ -92,9 +92,21 @@ const files = [
       return file.suspeitos.obitos || "0";
     });
 
-    const internadosTotal = files.reduce((acc, file) => {
-      const internados = file.confirmados.internados.total || 0;
-      return internados + acc;
+    //aqui começa a parte do codigo que soma os internados durantes os 3 meses e realiza verificação
+      const internadosTotal = files.reduce((acc, file, index) => {
+      const internadoAtual = file.confirmados.internados.total || 0;
+      let internadoAnterior = 0;
+
+      if (index > 0) {
+        internadoAnterior = files[index-1].confirmados.internados.total || 0;
+      }
+      let diferencaConfirmados = internadoAtual - internadoAnterior;
+
+      if (diferencaConfirmados < 0) {
+        diferencaConfirmados = 0;
+      }
+
+      return diferencaConfirmados + acc;
     }, 0);
     //reduce recebe dois parametros o callback e o valor inicial
     //acc é o acumulador (retorno da soma do callback anterior)
@@ -102,10 +114,25 @@ const files = [
     internadosTabela.innerHTML = internadosTotal;
 
 
-    const internadosuspeitosTotal = files.reduce((acc, file) => {
-      const internadoSuspeito = file.suspeitos.internados.total || 0;
-      return internadoSuspeito + acc;
+    const internadosuspeitosTotal = files.reduce((acc, file, index) => {
+      const internadoSuspeitoAtual = file.suspeitos.internados.total || 0;
+      let internadoSuspeitoAnterior = 0;
+      //recebe o index que é o numero "da vez"
+      // declarar a variavel let fora do for, por isso igualar igual a 0, para o caso de não estar usando
+
+      if (index > 0) {
+         internadoSuspeitoAnterior = files[index-1].suspeitos.internados.total || 0;
+      }
+      //acessa a posição anterior
+      let diferenca = internadoSuspeitoAtual - internadoSuspeitoAnterior;
+
+      if (diferenca < 0) {
+        diferenca = 0;
+      }
+      //se a diferença for menor que 0 então a diferença é igual a 0 porque não pode ser negativa
+      return diferenca + acc;
     }, 0);
+
     const internadosuspeitoTabela = document.querySelector(".internadosuspeitos-js")
     internadosuspeitoTabela.innerHTML = internadosuspeitosTotal;
 
