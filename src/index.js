@@ -92,6 +92,22 @@ const files = [
       return file.suspeitos.obitos || "0";
     });
 
+    const internadosTotal = files.reduce((acc, file) => {
+      const internados = file.confirmados.internados.total || 0;
+      return internados + acc;
+    }, 0);
+    //reduce recebe dois parametros o callback e o valor inicial
+    //acc é o acumulador (retorno da soma do callback anterior)
+    const internadosTabela = document.querySelector(".internados-js")
+    internadosTabela.innerHTML = internadosTotal;
+
+
+    const internadosuspeitosTotal = files.reduce((acc, file) => {
+      const internadoSuspeito = file.suspeitos.internados.total || 0;
+      return internadoSuspeito + acc;
+    }, 0);
+    const internadosuspeitoTabela = document.querySelector(".internadosuspeitos-js")
+    internadosuspeitoTabela.innerHTML = internadosuspeitosTotal;
 
 
 
