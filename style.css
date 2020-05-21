@@ -74,6 +74,7 @@
         margin-bottom : .5em;
         table-layout: fixed;
         text-align: center;
+
     }
 
     td,
@@ -81,6 +82,7 @@
         border: 1px solid #000;
         text-align: center;
         padding: 5px;
+        background-color: #550385;
     }
 
 
