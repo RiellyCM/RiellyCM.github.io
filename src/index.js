@@ -110,6 +110,7 @@ const files = [
     }, 0);
     //reduce recebe dois parametros o callback e o valor inicial
     //acc é o acumulador (retorno da soma do callback anterior)
+    //Essa adaptação foi necessária para que os números não fossem somados duas vezes, mas sim a diferença de um dia para o outro
     const internadosTabela = document.querySelector(".internados-js")
     internadosTabela.innerHTML = internadosTotal;
 
@@ -129,7 +130,7 @@ const files = [
       if (diferenca < 0) {
         diferenca = 0;
       }
-      //se a diferença for menor que 0 então a diferença é igual a 0 porque não pode ser negativa
+      //se a diferença for menor que 0 então a diferença é igual a 0 porque dessa forma diferenças negativas (quando pacientes saem) são iguais a 0
       return diferenca + acc;
     }, 0);
 
