@@ -180,6 +180,27 @@ const files = [
     const utisuspeitosTabela = document.querySelector(".suspeitosuti-js")
     utisuspeitosTabela.innerHTML = suspeitosUtiTotal;
 
+    //começa o código para casos que aguardam resultado
+    const aguardamResultado = files.reduce((acc, file, index) => {
+    const aguardamresultadoAtual = file.suspeitos.aguardamResultado || 0;
+    let aguardamresultadoAnterior = 0;
+
+    if (index > 0) {
+      aguardamresultadoAnterior = files[index-1].suspeitos.aguardamResultado || 0;
+    }
+
+    let diferencaAguardamResultados = aguardamresultadoAtual - aguardamresultadoAnterior;
+
+    if (diferencaAguardamResultados < 0) {
+      diferencaAguardamResultados = 0;
+    }
+
+    return diferencaAguardamResultados + acc;
+    }, 0);
+
+    const aguardamresultadosTabela = document.querySelector(".aguardamresultados-js")
+    aguardamresultadosTabela.innerHTML = aguardamResultado;
+
 var graficoCasosConfirmados = document.querySelector('#total-de-casos-confirmados').getContext('2d');
 var graficoMortes = document.querySelector('#total-de-mortes').getContext('2d');
 var graficoDadosCombinados = document.querySelector('#combinacao-obitos-suspeitos-confirmados-e-totais').getContext('2d');
