@@ -114,7 +114,7 @@ const files = [
     internadosTabela.innerHTML = internadosTotal;
 
 
-    const internadosuspeitosTotal = files.reduce((acc, file, index) => {
+      const internadosuspeitosTotal = files.reduce((acc, file, index) => {
       const internadoSuspeitoAtual = file.suspeitos.internados.total || 0;
       let internadoSuspeitoAnterior = 0;
       //recebe o index que é o numero "da vez"
@@ -136,7 +136,49 @@ const files = [
     const internadosuspeitoTabela = document.querySelector(".internadosuspeitos-js")
     internadosuspeitoTabela.innerHTML = internadosuspeitosTotal;
 
+    //aqui acaba a lógica para internados e começa a de UTI
 
+    const internadoUtiTotal = files.reduce((acc, file, index) => {
+    const utiAtual = file.confirmados.internados.uti || 0;
+    let utiAnterior = 0;
+
+    if (index > 0) {
+      utiAnterior = files[index-1].confirmados.internados.uti || 0;
+    }
+
+    let diferencautiConfirmados = utiAtual - utiAnterior;
+
+    if (diferencautiConfirmados < 0) {
+      diferencautiConfirmados = 0;
+    }
+
+    return diferencautiConfirmados + acc;
+    }, 0);
+
+    const utiTabela = document.querySelector(".confirmadosuti-js")
+    utiTabela.innerHTML = internadoUtiTotal;
+
+    //UTI para suspeitos
+
+    const suspeitosUtiTotal = files.reduce((acc, file, index) => {
+    const utisuspeitosAtual = file.suspeitos.internados.uti || 0;
+    let utisuspeitosAnterior = 0;
+
+    if (index > 0) {
+      utisuspeitosAnterior = files[index-1].suspeitos.internados.uti || 0;
+    }
+
+    let diferencautiSuspeitos = utisuspeitosAtual - utisuspeitosAnterior;
+
+    if (diferencautiSuspeitos < 0) {
+      diferencautiSuspeitos = 0;
+    }
+
+    return diferencautiSuspeitos + acc;
+    }, 0);
+
+    const utisuspeitosTabela = document.querySelector(".suspeitosuti-js")
+    utisuspeitosTabela.innerHTML = suspeitosUtiTotal;
 
 var graficoCasosConfirmados = document.querySelector('#total-de-casos-confirmados').getContext('2d');
 var graficoMortes = document.querySelector('#total-de-mortes').getContext('2d');
