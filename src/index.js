@@ -93,6 +93,8 @@ const files = [
     });
 
     //aqui começa a parte do codigo que soma os internados durantes os 3 meses e realiza verificação
+
+    //internados confirmados
       const internadosTotal = files.reduce((acc, file, index) => {
       const internadoAtual = file.confirmados.internados.total || 0;
       let internadoAnterior = 0;
@@ -114,7 +116,7 @@ const files = [
     const internadosTabela = document.querySelector(".internados-js")
     internadosTabela.innerHTML = internadosTotal;
 
-
+      //internados suspeitos
       const internadosuspeitosTotal = files.reduce((acc, file, index) => {
       const internadoSuspeitoAtual = file.suspeitos.internados.total || 0;
       let internadoSuspeitoAnterior = 0;
