@@ -272,11 +272,6 @@ new Chart(graficoDadosCombinados, {
           borderColor: '#10107d',
           data: ObitoSuspeitos,
         },
-        {
-          label: 'Total de Casos confirmados',
-          borderColor: '#89389c',
-          data: TotalConfirmados,
-        }
       ]
   },
 
