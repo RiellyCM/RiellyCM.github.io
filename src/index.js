@@ -72,6 +72,10 @@ const files = [
       return file.confirmados.recuperados || "0";
     });
 
+    const LinkLabels = files.map((file) => {
+      return file.confirmados.fonte || "0";
+    });
+
     const TotalConfirmados = files.map((file) => {
       return file.confirmados.total || "0";
     });
@@ -79,6 +83,7 @@ const files = [
     const ObitosConfirmados = files.map((file) => {
       return file.confirmados.obitos || "0";
     });
+
 
     const InternadosTotal = files.map((file) => {
       return file.confirmados.internados.total || "0";
@@ -91,6 +96,20 @@ const files = [
     const ObitoSuspeitos = files.map((file) => {
       return file.suspeitos.obitos || "0";
     });
+
+    const somaConfirmados = files.reduce((acc, file) => {
+        return acc + file.confirmados.total || 0 ;
+    }, 0);
+
+    //Esse reduce foi testado e funciona, deve ser adicionado a tabela
+
+    const somaObitos = files.reduce((acc, file) => {
+        return acc + file.confirmados.obitos || 0 ;
+    }, 0);
+    //Esse reduce foi testado e funciona, deve ser adicionado a tabela
+
+
+
 
     //aqui começa a parte do codigo que soma os internados durantes os 3 meses e realiza verificação
 
@@ -204,11 +223,17 @@ const files = [
     const aguardamresultadosTabela = document.querySelector(".aguardamresultados-js")
     aguardamresultadosTabela.innerHTML = aguardamResultado;
 
+    //começa o código do gráfico de barras que compara casos confirmados com óbitos por covid
+
+
+
 var graficoCasosConfirmados = document.querySelector('#total-de-casos-confirmados').getContext('2d');
-var graficoMortes = document.querySelector('#total-de-mortes').getContext('2d');
+var graficoObitos = document.querySelector('#total-de-obitos').getContext('2d');
 var graficoDadosCombinados = document.querySelector('#combinacao-obitos-suspeitos-confirmados-e-totais').getContext('2d');
 var graficoRecuperados = document.querySelector('#total-de-casos-recuperados').getContext('2d');
 var graficoCasosInternados = document.querySelector('#total-de-casos-internados').getContext('2d');
+//ESSA PARTE DO CÓDIGO ESTA CERTA, MAS FAZ PARTE DA TABELA
+//var graficoBarraConfirmadoseObitos = document.querySelector('#grafico-em-barras-confirmados-e-obitos').getContext('2d');
 
 new Chart(graficoCasosConfirmados, {
     // The type of chart we want to create
@@ -220,9 +245,8 @@ new Chart(graficoCasosConfirmados, {
 
         datasets: [
         {
-            label: 'Número total de casos confirmados',
-            backgroundColor: '#fff',
-            borderColor: 'rgb(255, 99, 132)',
+            label: 'Número total de casos (Confirmados)',
+            borderColor: '#ff6600',
             data: TotalConfirmados,
             //Aqui vai os valores que eu quero que apareçam no gráfico.
         }
@@ -233,7 +257,7 @@ new Chart(graficoCasosConfirmados, {
     options: {}
 });
 
-new Chart(graficoMortes, {
+new Chart(graficoObitos, {
   // The type of chart we want to create
   type: 'line',
 
@@ -242,9 +266,8 @@ new Chart(graficoMortes, {
       labels: labels,
       datasets: [
       {
-          label: 'Número total de óbitos confirmados',
-          backgroundColor: '#fff',
-          borderColor: 'rgb(255, 99, 132)',
+          label: 'Número total de óbitos (Confirmados)',
+          borderColor: '#d61313',
           data: ObitosConfirmados,
       }
     ]
@@ -263,13 +286,13 @@ new Chart(graficoDadosCombinados, {
       labels: labels,
       datasets: [
         {
-          label: 'óbitos confirmados',
-          borderColor: '#ff6384',
+          label: 'Óbitos (Confirmados)',
+          borderColor: '#d61313',
           data: ObitosConfirmados,
         },
         {
-          label: 'óbitos suspeitos',
-          borderColor: '#10107d',
+          label: 'Óbitos (Suspeitos)',
+          borderColor: '#058ba6',
           data: ObitoSuspeitos,
         },
       ]
@@ -289,13 +312,13 @@ new Chart(graficoRecuperados, {
 
         datasets: [
         {
-            label: 'casos recuperados confirmados',
-            borderColor: '#052b52',
+            label: 'Recuperados (Confirmados)',
+            borderColor: '#063302',
             data: RecuperadosConfirmados,
         },
         {
-            label: 'casos confirmados',
-            borderColor: '#1d7a06',
+            label: 'Casos Confirmados',
+            borderColor: '#ff6600',
             data: TotalConfirmados,
         }
       ]
@@ -305,7 +328,7 @@ new Chart(graficoRecuperados, {
     options: {}
   });
 
-  new Chart(graficoCasosInternados, {
+new Chart(graficoCasosInternados, {
       // The type of chart we want to create
       type: 'line',
 
@@ -315,23 +338,23 @@ new Chart(graficoRecuperados, {
 
           datasets: [
           {
-              label: 'Casos confirmados internados',
+              label: 'Internados (Confirmados)',
               borderColor: '#030a5c',
               data: InternadosTotal,
           },
           {
-              label: 'Casos confirmados internados em UTI',
-              borderColor: '#035c1c',
+              label: 'Internados em UTI (Confirmados)',
+              borderColor: '#2f8763',
               data: InternadosUti,
           },
           {
-              label: 'Obitos confirmados',
-              borderColor: '#800903',
+              label: 'Obitos (Confirmados)',
+              borderColor: '#d61313',
               data: ObitosConfirmados,
           },
           {
-              label: 'Confirmados recuperados',
-              borderColor: '#e3be29',
+              label: 'Recuperados (Confirmados)',
+              borderColor: '#063302',
               data: RecuperadosConfirmados,
           }
         ]
@@ -340,3 +363,32 @@ new Chart(graficoRecuperados, {
     // Configuration options go here
     options: {}
   });
+
+//grafico em stand-by, necessario aplicar o reduce de obitos e de confirmados
+//new Chart(graficoBarraConfirmadoseObitos, {
+      // The type of chart we want to create
+    //  type: 'bar',
+
+      // The data for our dataset
+      //data: {
+        //    labels: ['confirmados', 'ObitosConfirmados'],
+
+          //datasets: [
+          //{
+            //  label: 'Casos confirmados',
+              //backgroundColor: '#030a5c',
+              //borderColor: '#035c1c',
+              //data: somaConfirmados,
+          //},
+          //{
+            //  label: 'Óbitos Confirmados ',
+              //backgroundColor: '#1106b8',
+              //borderColor: '#035c1c',
+              //data: somaObitos,
+          //}
+        //]
+    //},
+
+    // Configuration options go here
+    //options: {}
+  //});
