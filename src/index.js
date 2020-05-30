@@ -105,13 +105,15 @@
 
     const somaObitosSuspeitos = files[files.length-1].suspeitos.obitos;
 
-    //deve ser utilizado no gráfico de óbitos (3)
-
     const linksReferencia = files.map((file) => {
       return file.fonte;
     });
     //colocar nas "bolinhas" de cada gráfico
 
+    const atualizaData = files[files.length-1].data;
+    const atualizaDataTabela = document.querySelector(".atualizadia-js")
+    atualizaDataTabela.innerHTML = atualizaData;
+    //busca o ultimo file de data e mostra no campo atualiza data da tabela
 
     //aqui começa a parte do codigo que soma os internados durantes os 3 meses e realiza verificação
 

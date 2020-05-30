@@ -1,0 +1,26 @@
+{
+"data": "28-05-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/mortes-pelo-novo-coronavirus-sobem-para-43-em-sorocaba/",
+"confirmados":
+    {
+      "total": 870,
+      "obitos": 43,
+      "recuperados": 797,
+      "internados":
+            {
+              "uti": 11,
+              "total": 30
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 8,
+       "descartados": 1.700,
+       "aguardamResultado": 179,
+       "internados":
+          {
+            "uti": 17,
+            "total": 48
+          }
+   }
+}

@@ -1,0 +1,26 @@
+{
+"data": "23-05-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-registra-mais-3-mortes-pela-covid-19-total-vai-a-40/",
+"confirmados":
+    {
+      "total": 658,
+      "obitos": 40,
+      "recuperados": 586,
+      "internados":
+            {
+              "uti": 14,
+              "total": 32
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 3,
+       "descartados": 1.528,
+       "aguardamResultado": 189,
+       "internados":
+          {
+            "uti": 9,
+            "total": 57
+          }
+   }
+}

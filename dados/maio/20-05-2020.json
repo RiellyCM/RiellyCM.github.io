@@ -1,0 +1,26 @@
+{
+"data": "20-05-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-tem-mais-62-casos-confirmados-do-novo-coronavirus-em-24h/",
+"confirmados":
+    {
+      "total": 548,
+      "obitos": 33,
+      "recuperados": 480,
+      "internados":
+            {
+              "uti": 18,
+              "total": 35
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 4,
+       "descartados": 1.380,
+       "aguardamResultado": 131,
+       "internados":
+          {
+            "uti": 12,
+            "total": 46
+          }
+   }
+}

@@ -1,0 +1,26 @@
+{
+"data": "27-05-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-registra-134-novos-casos-do-novo-coronavirus-em-24-horas/",
+"confirmados":
+    {
+      "total": 828,
+      "obitos": 41,
+      "recuperados": 756,
+      "internados":
+            {
+              "uti": 14,
+              "total": 31
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 5,
+       "descartados": 1.635,
+       "aguardamResultado": 122,
+       "internados":
+          {
+            "uti": 16,
+            "total": 47
+          }
+   }
+}

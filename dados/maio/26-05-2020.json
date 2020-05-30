@@ -1,0 +1,26 @@
+{
+"data": "26-05-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-tem-nova-morte-pela-covid-19-e-casos-confirmados-sobem-para-694/",
+"confirmados":
+    {
+      "total": 694,
+      "obitos": 41,
+      "recuperados": 608,
+      "internados":
+            {
+              "uti": 16,
+              "total": 45
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 3,
+       "descartados": 1.610,
+       "aguardamResultado": 150,
+       "internados":
+          {
+            "uti": 12,
+            "total": 53
+          }
+   }
+}

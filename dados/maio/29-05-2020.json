@@ -1,0 +1,26 @@
+{
+"data": "29-05-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-soma-930-casos-confirmados-da-covid-19/",
+"confirmados":
+    {
+      "total": 930,
+      "obitos": 43,
+      "recuperados": 853,
+      "internados":
+            {
+              "uti": 13,
+              "total": 34
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 8,
+       "descartados": 1.789,
+       "aguardamResultado": 170,
+       "internados":
+          {
+            "uti": 15,
+            "total": 52
+          }
+   }
+}

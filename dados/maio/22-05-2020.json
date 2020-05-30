@@ -1,0 +1,26 @@
+{
+"data": "22-05-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/mortes-pela-covid-19-sobem-para-37-em-sorocaba/",
+"confirmados":
+    {
+      "total": 618,
+      "obitos": 37,
+      "recuperados": 548,
+      "internados":
+            {
+              "uti": 16,
+              "total": 33
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 4,
+       "descartados": 1.449,
+       "aguardamResultado": 163,
+       "internados":
+          {
+            "uti": 10,
+            "total": 48
+          }
+   }
+}

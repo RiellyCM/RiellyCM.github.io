@@ -1,0 +1,26 @@
+{
+"data": "25-05-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/numero-de-casos-confirmados-com-o-novo-coronavirus-chega-a-685-em-sorocaba/",
+"confirmados":
+    {
+      "total": 685,
+      "obitos": 40,
+      "recuperados": 611,
+      "internados":
+            {
+              "uti": 15,
+              "total": 34
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 3,
+       "descartados": 1.598,
+       "aguardamResultado": 175,
+       "internados":
+          {
+            "uti": 13,
+            "total": 58
+          }
+   }
+}

@@ -96,6 +96,22 @@
         background-color: #550385;
     }
 
+    .Dia_de_Atualizacao_Tabela {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-family: monospace;
+        letter-spacing: 2px;
+        padding: 5px;
+    }
+
+    .atualizadia-js {
+        text-align: center;
+        font-size: 16px;
+        font-family: monospace;
+        letter-spacing: 2px;
+    }
+
 
     .graphic-covid {
         background-color: #FFFAF0;

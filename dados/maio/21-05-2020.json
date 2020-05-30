@@ -1,0 +1,26 @@
+{
+"data": "21-05-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/casos-confirmados-da-covid-19-sobem-para-577-em-sorocaba/",
+"confirmados":
+    {
+      "total": 577,
+      "obitos": 33,
+      "recuperados": 506,
+      "internados":
+            {
+              "uti": 19,
+              "total": 38
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 3,
+       "descartados": 1.418,
+       "aguardamResultado": 133,
+       "internados":
+          {
+            "uti": 9,
+            "total": 42
+          }
+   }
+}
