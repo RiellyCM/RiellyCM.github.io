@@ -1,4 +1,4 @@
-const files = [
+  const files = [
     require("../dados/marco/18-03-2020.json"),
     require("../dados/marco/19-03-2020.json"),
     require("../dados/marco/20-03-2020.json"),
@@ -63,58 +63,60 @@ const files = [
     require("../dados/maio/18-05-2020.json"),
     require("../dados/maio/19-05-2020.json"),
     ];
+    //adiciona em files todos os file, ou seja, todos os arquivos que contem os dados utilizados.
 
     const labels = files.map((file) => {
       return file.data;
     });
+    //na const labels é aplicado a todos os files uma função map
+    //tal função é responsável por buscar todos os elementos determinados e devolver um array com a mesma quantia de elementos
 
-    const RecuperadosConfirmados = files.map((file) => {
+    const recuperadosConfirmados = files.map((file) => {
       return file.confirmados.recuperados || "0";
     });
 
-    const LinkLabels = files.map((file) => {
-      return file.confirmados.fonte || "0";
-    });
-
-    const TotalConfirmados = files.map((file) => {
+    const totalConfirmados = files.map((file) => {
       return file.confirmados.total || "0";
     });
 
-    const ObitosConfirmados = files.map((file) => {
+    const obitosConfirmados = files.map((file) => {
       return file.confirmados.obitos || "0";
     });
 
-
-    const InternadosTotal = files.map((file) => {
+    const internadosTotal = files.map((file) => {
       return file.confirmados.internados.total || "0";
     });
 
-    const InternadosUti = files.map((file) => {
+    const internadosUti = files.map((file) => {
       return file.confirmados.internados.uti || "0";
     });
 
-    const ObitoSuspeitos = files.map((file) => {
+    const obitosSuspeitos = files.map((file) => {
       return file.suspeitos.obitos || "0";
     });
-
-    const somaConfirmados = files.reduce((acc, file) => {
-        return acc + file.confirmados.total || 0 ;
-    }, 0);
-
-    //Esse reduce foi testado e funciona, deve ser adicionado a tabela
-
-    const somaObitos = files.reduce((acc, file) => {
-        return acc + file.confirmados.obitos || 0 ;
-    }, 0);
-    //Esse reduce foi testado e funciona, deve ser adicionado a tabela
+    //todos os maps realizados acima tem como objetivo buscar determinada informação e devolver um array com a mesma quantidade de itens
 
 
+    const ultimoNumeroConfirmados = files[files.length-1].confirmados.total;
+      //length fala o comprimento do array.
+      //Como regra o primeiro elemento de um array é 0, portanto precisamos fazer -1 p/ pegar o ultimo elemento real
+
+    const somaObitosConfirmados = files[files.length-1].confirmados.obitos;
+
+    const somaObitosSuspeitos = files[files.length-1].suspeitos.obitos;
+
+    //deve ser utilizado no gráfico de óbitos (3)
+
+    const linksReferencia = files.map((file) => {
+      return file.fonte;
+    });
+    //colocar nas "bolinhas" de cada gráfico
 
 
     //aqui começa a parte do codigo que soma os internados durantes os 3 meses e realiza verificação
 
     //internados confirmados
-      const internadosTotal = files.reduce((acc, file, index) => {
+      const somaInternadosTotal = files.reduce((acc, file, index) => {
       const internadoAtual = file.confirmados.internados.total || 0;
       let internadoAnterior = 0;
 
@@ -133,7 +135,7 @@ const files = [
     //acc é o acumulador (retorno da soma do callback anterior)
     //Essa adaptação foi necessária para que os números não fossem somados duas vezes, mas sim a diferença de um dia para o outro
     const internadosTabela = document.querySelector(".internados-js")
-    internadosTabela.innerHTML = internadosTotal;
+    internadosTabela.innerHTML = somaInternadosTotal;
 
       //internados suspeitos
       const internadosuspeitosTotal = files.reduce((acc, file, index) => {
@@ -153,7 +155,7 @@ const files = [
       }
       //se a diferença for menor que 0 então a diferença é igual a 0 porque dessa forma diferenças negativas (quando pacientes saem) são iguais a 0
       return diferenca + acc;
-    }, 0);
+      }, 0);
 
     const internadosuspeitoTabela = document.querySelector(".internadosuspeitos-js")
     internadosuspeitoTabela.innerHTML = internadosuspeitosTotal;
@@ -223,17 +225,12 @@ const files = [
     const aguardamresultadosTabela = document.querySelector(".aguardamresultados-js")
     aguardamresultadosTabela.innerHTML = aguardamResultado;
 
-    //começa o código do gráfico de barras que compara casos confirmados com óbitos por covid
 
-
-
-var graficoCasosConfirmados = document.querySelector('#total-de-casos-confirmados').getContext('2d');
-var graficoObitos = document.querySelector('#total-de-obitos').getContext('2d');
-var graficoDadosCombinados = document.querySelector('#combinacao-obitos-suspeitos-confirmados-e-totais').getContext('2d');
-var graficoRecuperados = document.querySelector('#total-de-casos-recuperados').getContext('2d');
-var graficoCasosInternados = document.querySelector('#total-de-casos-internados').getContext('2d');
-//ESSA PARTE DO CÓDIGO ESTA CERTA, MAS FAZ PARTE DA TABELA
-//var graficoBarraConfirmadoseObitos = document.querySelector('#grafico-em-barras-confirmados-e-obitos').getContext('2d');
+const graficoCasosConfirmados = document.querySelector('#total-de-casos-confirmados').getContext('2d');
+const graficoObitos = document.querySelector('#total-de-obitos').getContext('2d');
+const graficoRecuperados = document.querySelector('#total-de-casos-recuperados').getContext('2d');
+const graficoCasosInternados = document.querySelector('#total-de-casos-internados').getContext('2d');
+const graficoDadosCombinadosDeÓbitos = document.querySelector('#combinacao-obitos-suspeitos-confirmados-e-totais').getContext('2d');
 
 new Chart(graficoCasosConfirmados, {
     // The type of chart we want to create
@@ -247,7 +244,7 @@ new Chart(graficoCasosConfirmados, {
         {
             label: 'Número total de casos (Confirmados)',
             borderColor: '#ff6600',
-            data: TotalConfirmados,
+            data: totalConfirmados,
             //Aqui vai os valores que eu quero que apareçam no gráfico.
         }
       ]
@@ -268,34 +265,9 @@ new Chart(graficoObitos, {
       {
           label: 'Número total de óbitos (Confirmados)',
           borderColor: '#d61313',
-          data: ObitosConfirmados,
+          data: obitosConfirmados,
       }
     ]
-  },
-
-  // Configuration options go here
-  options: {}
-});
-
-new Chart(graficoDadosCombinados, {
-  // The type of chart we want to create
-  type: 'line',
-
-  // The data for our dataset
-  data: {
-      labels: labels,
-      datasets: [
-        {
-          label: 'Óbitos (Confirmados)',
-          borderColor: '#d61313',
-          data: ObitosConfirmados,
-        },
-        {
-          label: 'Óbitos (Suspeitos)',
-          borderColor: '#058ba6',
-          data: ObitoSuspeitos,
-        },
-      ]
   },
 
   // Configuration options go here
@@ -314,12 +286,12 @@ new Chart(graficoRecuperados, {
         {
             label: 'Recuperados (Confirmados)',
             borderColor: '#063302',
-            data: RecuperadosConfirmados,
+            data: recuperadosConfirmados,
         },
         {
             label: 'Casos Confirmados',
             borderColor: '#ff6600',
-            data: TotalConfirmados,
+            data: totalConfirmados,
         }
       ]
     },
@@ -340,22 +312,22 @@ new Chart(graficoCasosInternados, {
           {
               label: 'Internados (Confirmados)',
               borderColor: '#030a5c',
-              data: InternadosTotal,
+              data: internadosTotal,
           },
           {
               label: 'Internados em UTI (Confirmados)',
               borderColor: '#2f8763',
-              data: InternadosUti,
+              data: internadosUti,
           },
           {
               label: 'Obitos (Confirmados)',
               borderColor: '#d61313',
-              data: ObitosConfirmados,
+              data: obitosConfirmados,
           },
           {
               label: 'Recuperados (Confirmados)',
               borderColor: '#063302',
-              data: RecuperadosConfirmados,
+              data: recuperadosConfirmados,
           }
         ]
     },
@@ -364,31 +336,31 @@ new Chart(graficoCasosInternados, {
     options: {}
   });
 
-//grafico em stand-by, necessario aplicar o reduce de obitos e de confirmados
-//new Chart(graficoBarraConfirmadoseObitos, {
-      // The type of chart we want to create
-    //  type: 'bar',
+new Chart(graficoDadosCombinadosDeÓbitos, {
+    // The type of chart we want to create
+    type: 'bar',
 
-      // The data for our dataset
-      //data: {
-        //    labels: ['confirmados', 'ObitosConfirmados'],
-
-          //datasets: [
-          //{
-            //  label: 'Casos confirmados',
-              //backgroundColor: '#030a5c',
-              //borderColor: '#035c1c',
-              //data: somaConfirmados,
-          //},
-          //{
-            //  label: 'Óbitos Confirmados ',
-              //backgroundColor: '#1106b8',
-              //borderColor: '#035c1c',
-              //data: somaObitos,
-          //}
-        //]
-    //},
+    // The data for our dataset
+    data: {
+        datasets: [
+          {
+            label: 'Total de Casos confirmados',
+            backgroundColor: '#ff6600',
+            data: [ultimoNumeroConfirmados],
+          },
+          {
+            label: 'Óbitos (Confirmados)',
+            backgroundColor: '#d61313',
+            data: [somaObitosConfirmados],
+          },
+          {
+            label: 'Óbitos (Suspeitos)',
+            backgroundColor: '#058ba6',
+            data: [somaObitosSuspeitos],
+          }
+        ]
+    },
 
     // Configuration options go here
-    //options: {}
-  //});
+    options: {}
+  });
