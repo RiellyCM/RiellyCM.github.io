@@ -62,8 +62,19 @@
     require("../dados/maio/17-05-2020.json"),
     require("../dados/maio/18-05-2020.json"),
     require("../dados/maio/19-05-2020.json"),
+    require("../dados/maio/20-05-2020.json"),
+    require("../dados/maio/21-05-2020.json"),
+    require("../dados/maio/22-05-2020.json"),
+    require("../dados/maio/23-05-2020.json"),
+    require("../dados/maio/24-05-2020.json"),
+    require("../dados/maio/25-05-2020.json"),
+    require("../dados/maio/26-05-2020.json"),
+    require("../dados/maio/27-05-2020.json"),
+    require("../dados/maio/28-05-2020.json"),
+    require("../dados/maio/29-05-2020.json"),
     ];
     //adiciona em files todos os file, ou seja, todos os arquivos que contem os dados utilizados.
+    //precisa atualizar os jsons no file sempre para que eles se apliquem
 
     const labels = files.map((file) => {
       return file.data;
@@ -114,6 +125,25 @@
     const atualizaDataTabela = document.querySelector(".atualizadia-js")
     atualizaDataTabela.innerHTML = atualizaData;
     //busca o ultimo file de data e mostra no campo atualiza data da tabela
+
+    const atualizaTotalConfirmadosTabela = files[files.length-1].confirmados.total;
+    const atualizaConfirmadosTabela = document.querySelector(".totalconfirmadostabela-js")
+    atualizaConfirmadosTabela.innerHTML = atualizaTotalConfirmadosTabela;
+    //busca os dados de total dentro de confirmados do ultimo file de files e atualiza na tabela
+
+    const atualizaTotalObitosConfirmadosTabela = files[files.length-1].confirmados.obitos;
+    const atualizaObitosConfirmadosTabela = document.querySelector(".obitosconfirmados-js")
+    atualizaObitosConfirmadosTabela.innerHTML = atualizaTotalObitosConfirmadosTabela;
+    //busca obitos dentro de confirmados do ultimo file de files
+
+    const atualizaTotalObitosSuspeitosTabela = files[files.length-1].suspeitos.obitos;
+    const atualizaObitosSuspeitosTabela = document.querySelector(".obitosuspeito-js")
+    atualizaObitosSuspeitosTabela.innerHTML = atualizaTotalObitosSuspeitosTabela;
+    //
+
+    const atualizaRecuperadosConfirmadosTabela = files[files.length-1].confirmados.recuperados;
+    const atualizaRecuperadosTabela = document.querySelector(".recuperados-js")
+    atualizaRecuperadosTabela.innerHTML = atualizaRecuperadosConfirmadosTabela;
 
     //aqui começa a parte do codigo que soma os internados durantes os 3 meses e realiza verificação
 
@@ -187,20 +217,20 @@
     //UTI para suspeitos
 
     const suspeitosUtiTotal = files.reduce((acc, file, index) => {
-    const utisuspeitosAtual = file.suspeitos.internados.uti || 0;
-    let utisuspeitosAnterior = 0;
+      const utisuspeitosAtual = file.suspeitos.internados.uti || 0;
+      let utisuspeitosAnterior = 0;
 
-    if (index > 0) {
-      utisuspeitosAnterior = files[index-1].suspeitos.internados.uti || 0;
-    }
+      if (index > 0) {
+        utisuspeitosAnterior = files[index-1].suspeitos.internados.uti || 0;
+      }
 
-    let diferencautiSuspeitos = utisuspeitosAtual - utisuspeitosAnterior;
+      let diferencautiSuspeitos = utisuspeitosAtual - utisuspeitosAnterior;
 
-    if (diferencautiSuspeitos < 0) {
-      diferencautiSuspeitos = 0;
-    }
+      if (diferencautiSuspeitos < 0) {
+        diferencautiSuspeitos = 0;
+      }
 
-    return diferencautiSuspeitos + acc;
+      return diferencautiSuspeitos + acc;
     }, 0);
 
     const utisuspeitosTabela = document.querySelector(".suspeitosuti-js")
@@ -208,25 +238,30 @@
 
     //começa o código para casos que aguardam resultado
     const aguardamResultado = files.reduce((acc, file, index) => {
-    const aguardamresultadoAtual = file.suspeitos.aguardamResultado || 0;
-    let aguardamresultadoAnterior = 0;
+      const aguardamresultadoAtual = file.suspeitos.aguardamResultado || 0;
+      let aguardamresultadoAnterior = 0;
 
-    if (index > 0) {
-      aguardamresultadoAnterior = files[index-1].suspeitos.aguardamResultado || 0;
-    }
+      if (index > 0) {
+        aguardamresultadoAnterior = files[index-1].suspeitos.aguardamResultado || 0;
+      }
 
-    let diferencaAguardamResultados = aguardamresultadoAtual - aguardamresultadoAnterior;
+      let diferencaAguardamResultados = aguardamresultadoAtual - aguardamresultadoAnterior;
 
-    if (diferencaAguardamResultados < 0) {
-      diferencaAguardamResultados = 0;
-    }
+      if (diferencaAguardamResultados < 0) {
+        diferencaAguardamResultados = 0;
+      }
 
-    return diferencaAguardamResultados + acc;
+      return diferencaAguardamResultados + acc;
     }, 0);
 
     const aguardamresultadosTabela = document.querySelector(".aguardamresultados-js")
     aguardamresultadosTabela.innerHTML = aguardamResultado;
 
+
+    const atualizaTotalDescartadosTabela = files[files.length-1].suspeitos.descartados;
+    const atualizaDescartadosTabela = document.querySelector(".descartados-js")
+    atualizaDescartadosTabela.innerHTML = atualizaTotalDescartadosTabela;
+    //mesma lógica em que é pego os descartados de suspeitos do ultimo file de files
 
 const graficoCasosConfirmados = document.querySelector('#total-de-casos-confirmados').getContext('2d');
 const graficoObitos = document.querySelector('#total-de-obitos').getContext('2d');
