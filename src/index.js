@@ -107,15 +107,6 @@
     });
     //todos os maps realizados acima tem como objetivo buscar determinada informação e devolver um array com a mesma quantidade de itens
 
-
-    const ultimoNumeroConfirmados = files[files.length-1].confirmados.total;
-      //length fala o comprimento do array.
-      //Como regra o primeiro elemento de um array é 0, portanto precisamos fazer -1 p/ pegar o ultimo elemento real
-
-    const somaObitosConfirmados = files[files.length-1].confirmados.obitos;
-
-    const somaObitosSuspeitos = files[files.length-1].suspeitos.obitos;
-
     const linksReferencia = files.map((file) => {
       return file.fonte;
     });
@@ -139,129 +130,45 @@
     const atualizaTotalObitosSuspeitosTabela = files[files.length-1].suspeitos.obitos;
     const atualizaObitosSuspeitosTabela = document.querySelector(".obitosuspeito-js")
     atualizaObitosSuspeitosTabela.innerHTML = atualizaTotalObitosSuspeitosTabela;
-    //
+    //atualiza obitos suspeitos do ultimo file de files na tabela
 
     const atualizaRecuperadosConfirmadosTabela = files[files.length-1].confirmados.recuperados;
     const atualizaRecuperadosTabela = document.querySelector(".recuperados-js")
     atualizaRecuperadosTabela.innerHTML = atualizaRecuperadosConfirmadosTabela;
 
-    //aqui começa a parte do codigo que soma os internados durantes os 3 meses e realiza verificação
+    const atualizaInternadosConfirmadosTabela = files[files.length-1].confirmados.internados.total;
+    const atualizaInternadosTabela = document.querySelector(".internados-js")
+    atualizaInternadosTabela.innerHTML = atualizaInternadosConfirmadosTabela;
 
-    //internados confirmados
-      const somaInternadosTotal = files.reduce((acc, file, index) => {
-      const internadoAtual = file.confirmados.internados.total || 0;
-      let internadoAnterior = 0;
+    const atualizaInternadosSuspeitosTabela = files[files.length-1].suspeitos.internados.total;
+    const atualizaSuspeitosInternadosTabela = document.querySelector(".internadosuspeitos-js")
+    atualizaSuspeitosInternadosTabela.innerHTML = atualizaInternadosSuspeitosTabela;
 
-      if (index > 0) {
-        internadoAnterior = files[index-1].confirmados.internados.total || 0;
-      }
-      let diferencaConfirmados = internadoAtual - internadoAnterior;
+    const atualizaUTIConfirmadosTabela = files[files.length-1].confirmados.internados.uti;
+    const atualizaUTITabela = document.querySelector(".confirmadosuti-js")
+    atualizaUTITabela.innerHTML = atualizaUTIConfirmadosTabela;
 
-      if (diferencaConfirmados < 0) {
-        diferencaConfirmados = 0;
-      }
-
-      return diferencaConfirmados + acc;
-    }, 0);
-    //reduce recebe dois parametros o callback e o valor inicial
-    //acc é o acumulador (retorno da soma do callback anterior)
-    //Essa adaptação foi necessária para que os números não fossem somados duas vezes, mas sim a diferença de um dia para o outro
-    const internadosTabela = document.querySelector(".internados-js")
-    internadosTabela.innerHTML = somaInternadosTotal;
-
-      //internados suspeitos
-      const internadosuspeitosTotal = files.reduce((acc, file, index) => {
-      const internadoSuspeitoAtual = file.suspeitos.internados.total || 0;
-      let internadoSuspeitoAnterior = 0;
-      //recebe o index que é o numero "da vez"
-      // declarar a variavel let fora do for, por isso igualar igual a 0, para o caso de não estar usando
-
-      if (index > 0) {
-         internadoSuspeitoAnterior = files[index-1].suspeitos.internados.total || 0;
-      }
-      //acessa a posição anterior
-      let diferenca = internadoSuspeitoAtual - internadoSuspeitoAnterior;
-
-      if (diferenca < 0) {
-        diferenca = 0;
-      }
-      //se a diferença for menor que 0 então a diferença é igual a 0 porque dessa forma diferenças negativas (quando pacientes saem) são iguais a 0
-      return diferenca + acc;
-      }, 0);
-
-    const internadosuspeitoTabela = document.querySelector(".internadosuspeitos-js")
-    internadosuspeitoTabela.innerHTML = internadosuspeitosTotal;
-
-    //aqui acaba a lógica para internados e começa a de UTI
-
-    const internadoUtiTotal = files.reduce((acc, file, index) => {
-    const utiAtual = file.confirmados.internados.uti || 0;
-    let utiAnterior = 0;
-
-    if (index > 0) {
-      utiAnterior = files[index-1].confirmados.internados.uti || 0;
-    }
-
-    let diferencautiConfirmados = utiAtual - utiAnterior;
-
-    if (diferencautiConfirmados < 0) {
-      diferencautiConfirmados = 0;
-    }
-
-    return diferencautiConfirmados + acc;
-    }, 0);
-
-    const utiTabela = document.querySelector(".confirmadosuti-js")
-    utiTabela.innerHTML = internadoUtiTotal;
-
-    //UTI para suspeitos
-
-    const suspeitosUtiTotal = files.reduce((acc, file, index) => {
-      const utisuspeitosAtual = file.suspeitos.internados.uti || 0;
-      let utisuspeitosAnterior = 0;
-
-      if (index > 0) {
-        utisuspeitosAnterior = files[index-1].suspeitos.internados.uti || 0;
-      }
-
-      let diferencautiSuspeitos = utisuspeitosAtual - utisuspeitosAnterior;
-
-      if (diferencautiSuspeitos < 0) {
-        diferencautiSuspeitos = 0;
-      }
-
-      return diferencautiSuspeitos + acc;
-    }, 0);
-
-    const utisuspeitosTabela = document.querySelector(".suspeitosuti-js")
-    utisuspeitosTabela.innerHTML = suspeitosUtiTotal;
-
-    //começa o código para casos que aguardam resultado
-    const aguardamResultado = files.reduce((acc, file, index) => {
-      const aguardamresultadoAtual = file.suspeitos.aguardamResultado || 0;
-      let aguardamresultadoAnterior = 0;
-
-      if (index > 0) {
-        aguardamresultadoAnterior = files[index-1].suspeitos.aguardamResultado || 0;
-      }
-
-      let diferencaAguardamResultados = aguardamresultadoAtual - aguardamresultadoAnterior;
-
-      if (diferencaAguardamResultados < 0) {
-        diferencaAguardamResultados = 0;
-      }
-
-      return diferencaAguardamResultados + acc;
-    }, 0);
-
-    const aguardamresultadosTabela = document.querySelector(".aguardamresultados-js")
-    aguardamresultadosTabela.innerHTML = aguardamResultado;
-
+    const atualizaUTISuspeitosTabela = files[files.length-1].suspeitos.internados.uti;
+    const atualizaSuspeitosUTITabela = document.querySelector(".suspeitosuti-js")
+    atualizaSuspeitosUTITabela.innerHTML = atualizaUTISuspeitosTabela;
 
     const atualizaTotalDescartadosTabela = files[files.length-1].suspeitos.descartados;
     const atualizaDescartadosTabela = document.querySelector(".descartados-js")
     atualizaDescartadosTabela.innerHTML = atualizaTotalDescartadosTabela;
     //mesma lógica em que é pego os descartados de suspeitos do ultimo file de files
+
+    const atualizaTotalAguardamResultadosTabela = files[files.length-1].suspeitos.aguardamResultado;
+    const atualizaAguardamResultadosTabela = document.querySelector(".aguardamresultados-js")
+    atualizaAguardamResultadosTabela.innerHTML = atualizaTotalAguardamResultadosTabela;
+
+    //dados utilizados no ultimo gráfico de barras
+    const ultimoNumeroConfirmados = files[files.length-1].confirmados.total;
+      //length fala o comprimento do array.
+      //Como regra o primeiro elemento de um array é 0, portanto precisamos fazer -1 p/ pegar o ultimo elemento real
+
+    const somaObitosConfirmados = files[files.length-1].confirmados.obitos;
+
+    const somaObitosSuspeitos = files[files.length-1].suspeitos.obitos;
 
 const graficoCasosConfirmados = document.querySelector('#total-de-casos-confirmados').getContext('2d');
 const graficoObitos = document.querySelector('#total-de-obitos').getContext('2d');
