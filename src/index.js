@@ -195,7 +195,41 @@ new Chart(graficoCasosConfirmados, {
     },
 
     // Configuration options go here
-    options: {}
+    options: {
+      tooltips: {
+        enabled: false,
+        mode:"nearest",
+        intersect:false,
+
+        custom: function (tooltipModel) {
+            let tooltipEl = document.querySelector('#chartjs-tooltip');
+
+            if (!tooltipEl) {
+                tooltipEl = document.createElement('div');
+                tooltipEl.id = 'chartjs-tooltip';
+                tooltipEl.innerHTML = '<a href=""> Veja mais sobre </a>';
+                document.body.appendChild(tooltipEl);
+            }
+
+            if (tooltipModel.opacity === 0) {
+                tooltipEl.style.opacity = 0;
+                return;
+            }
+
+            tooltipEl.style.opacity = 1;
+
+            tooltipEl.style.position = 'absolute';
+
+            const position = this._chart.canvas.getBoundingClientRect();
+
+            tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
+            tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
+
+            tooltipEl.style.padding = tooltipModel.yPadding + 'px ' + tooltipModel.xPadding + 'px';
+            tooltipEl.style.pointerEvents = 'none';
+        }
+      }
+    }
 });
 
 new Chart(graficoObitos, {
@@ -267,11 +301,6 @@ new Chart(graficoCasosInternados, {
               label: 'Obitos (Confirmados)',
               borderColor: '#d61313',
               data: obitosConfirmados,
-          },
-          {
-              label: 'Recuperados (Confirmados)',
-              borderColor: '#063302',
-              data: recuperadosConfirmados,
           }
         ]
     },
