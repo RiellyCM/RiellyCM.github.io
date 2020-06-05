@@ -25,8 +25,8 @@
         @media (min-width:600px) {
           .header {
             display: flex;
+          }
         }
-    }
 
     .header-section__principal {
           display: flex;
@@ -80,6 +80,14 @@
         font-size: 20px;
     }
 
+      @media (max-width:600px) {
+        .table {
+          font-size: 15px;
+          text-transform: none;
+          width: 90%;
+        }
+      }
+
     .Titulo_Tabela {
       color: #f7f8fa;
       text-align: center;
@@ -119,6 +127,7 @@
         margin: auto;
         padding-bottom: 10px;
     }
+
     .Titulo__Graficos {
       color: #021d38;
       text-align: center;
