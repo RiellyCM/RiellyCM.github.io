@@ -1,0 +1,26 @@
+{
+"data": "02-06-2020",
+"fonte": "https://noticias.sorocaba.sp.gov.br/sorocaba-passa-dos-mil-casos-do-novo-coronavirus-e-registra-mais-4-obitos/",
+"confirmados":
+    {
+      "total": 1083,
+      "obitos": 50,
+      "recuperados": 986,
+      "internados":
+            {
+              "uti": 16,
+              "total": 47
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 6,
+       "descartados":  2.038,
+       "aguardamResultado": 129,
+       "internados":
+          {
+            "uti": 9,
+            "total": 32
+          }
+   }
+}

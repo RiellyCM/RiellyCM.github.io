@@ -1,0 +1,26 @@
+{
+"data": "03-06-2020",
+"fonte": "https://noticias.sorocaba.sp.gov.br/mais-3-obitos-sao-confirmados-com-o-novo-coronavirus/",
+"confirmados":
+    {
+      "total": 1097,
+      "obitos": 53,
+      "recuperados": 997,
+      "internados":
+            {
+              "uti": 18,
+              "total": 47
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 9,
+       "descartados":  2.735,
+       "aguardamResultado": 124,
+       "internados":
+          {
+            "uti": 12,
+            "total": 45
+          }
+   }
+}

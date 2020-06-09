@@ -1,0 +1,26 @@
+{
+"data": "31-05-2020",
+"fonte": "https://noticias.sorocaba.sp.gov.br/obitos-pela-covid-19-chegam-a-45-em-sorocaba/",
+"confirmados":
+    {
+      "total": 989,
+      "obitos": 45,
+      "recuperados": 913,
+      "internados":
+            {
+              "uti": 10,
+              "total": 31
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 8,
+       "descartados":  1.916,
+       "aguardamResultado": 203,
+       "internados":
+          {
+            "uti": 19,
+            "total": 55
+          }
+   }
+}

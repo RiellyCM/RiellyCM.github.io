@@ -1,0 +1,26 @@
+{
+"data": "01-06-2020",
+"fonte": "https://noticias.sorocaba.sp.gov.br/sorocaba-tem-novo-obito-pela-covid-19-e-casos-confirmados-sobem-para-995/",
+"confirmados":
+    {
+      "total": 995,
+      "obitos": 46,
+      "recuperados": 910,
+      "internados":
+            {
+              "uti": 16,
+              "total": 39
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 8,
+       "descartados":  1.932,
+       "aguardamResultado": 170,
+       "internados":
+          {
+            "uti": 13,
+            "total": 55
+          }
+   }
+}

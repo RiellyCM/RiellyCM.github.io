@@ -72,6 +72,10 @@
     require("../dados/maio/27-05-2020.json"),
     require("../dados/maio/28-05-2020.json"),
     require("../dados/maio/29-05-2020.json"),
+    require("../dados/maio/31-05-2020.json"),
+    require("../dados/junho/01-06-2020.json"),
+    require("../dados/junho/02-06-2020.json"),
+    require("../dados/junho/03-06-2020.json"),
     ];
     //adiciona em files todos os file, ou seja, todos os arquivos que contem os dados utilizados.
     //precisa atualizar os jsons no file sempre para que eles se apliquem
