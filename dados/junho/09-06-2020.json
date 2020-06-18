@@ -3,9 +3,9 @@
 "fonte": "http://noticias.sorocaba.sp.gov.br/mortes-pela-covid-19-chegam-a-71-em-sorocaba/",
 "confirmados":
     {
-      "total": 1.419,
+      "total": 1419,
       "obitos": 71,
-      "recuperados": 1.285,
+      "recuperados": 1285,
       "internados":
             {
               "uti": 16,
@@ -15,7 +15,7 @@
 "suspeitos":
     {
        "obitos": 9,
-       "descartados":  3.615,
+       "descartados":  3615,
        "aguardamResultado": 122,
        "internados":
           {

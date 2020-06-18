@@ -5,7 +5,7 @@
     {
       "total": 1233,
       "obitos": 60,
-      "recuperados": 1.124,
+      "recuperados": 1124,
       "internados":
             {
               "uti": 15,
@@ -15,7 +15,7 @@
 "suspeitos":
     {
        "obitos": 6,
-       "descartados":  2.953,
+       "descartados":  2953,
        "aguardamResultado": 84,
        "internados":
           {

@@ -3,9 +3,9 @@
 "fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-registra-1-799-casos-confirmados-da-covid-19/",
 "confirmados":
     {
-      "total": 1.799,
+      "total": 1799,
       "obitos": 76,
-      "recuperados": 1.662,
+      "recuperados": 1662,
       "internados":
             {
               "uti": 17,
@@ -15,7 +15,7 @@
 "suspeitos":
     {
        "obitos": 6,
-       "descartados":  4.018,
+       "descartados":  4018,
        "aguardamResultado": 196,
        "internados":
           {

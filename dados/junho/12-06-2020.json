@@ -3,9 +3,9 @@
 "fonte": "http://noticias.sorocaba.sp.gov.br/casos-confirmados-do-novo-coronavirus-chegam-a-1-716-em-sorocaba/",
 "confirmados":
     {
-      "total": 1.716,
+      "total": 1716,
       "obitos": 74,
-      "recuperados": 1.576,
+      "recuperados": 1576,
       "internados":
             {
               "uti": 19,
@@ -15,7 +15,7 @@
 "suspeitos":
     {
        "obitos": 6,
-       "descartados":  3.893,
+       "descartados":  3893,
        "aguardamResultado": 136,
        "internados":
           {
