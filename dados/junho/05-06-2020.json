@@ -1,0 +1,26 @@
+{
+"data": "05-06-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/mais-quatro-mortes-pela-covid-19-sao-registradas-em-sorocaba/",
+"confirmados":
+    {
+      "total": 1233,
+      "obitos": 60,
+      "recuperados": 1.124,
+      "internados":
+            {
+              "uti": 15,
+              "total": 49
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 6,
+       "descartados":  2.953,
+       "aguardamResultado": 84,
+       "internados":
+          {
+            "uti": 10,
+            "total": 35
+          }
+   }
+}

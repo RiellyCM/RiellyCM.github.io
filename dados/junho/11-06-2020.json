@@ -1,0 +1,26 @@
+{
+"data": "11-06-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-registra-154-casos-da-covid-19-em-24-horas/",
+"confirmados":
+    {
+      "total": 1.652,
+      "obitos": 74,
+      "recuperados": 1.512,
+      "internados":
+            {
+              "uti": 19,
+              "total": 66
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 5,
+       "descartados":  3.650,
+       "aguardamResultado": 136,
+       "internados":
+          {
+            "uti": 20,
+            "total": 72
+          }
+   }
+}

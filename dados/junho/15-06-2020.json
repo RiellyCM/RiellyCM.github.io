@@ -1,0 +1,26 @@
+{
+"data": "15-06-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/total-de-obitos-confirmados-com-a-covid-19-chega-a-80-em-sorocaba/",
+"confirmados":
+    {
+      "total": 1.837,
+      "obitos": 80,
+      "recuperados": 1.683,
+      "internados":
+            {
+              "uti": 23,
+              "total": 74
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 4,
+       "descartados": 4.030,
+       "aguardamResultado": 180,
+       "internados":
+          {
+            "uti": 18,
+            "total": 84
+          }
+   }
+}

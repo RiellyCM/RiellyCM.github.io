@@ -1,0 +1,26 @@
+{
+"data": "10-06-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-registra-1-498-casos-da-covid-19-e-73-mortes/",
+"confirmados":
+    {
+      "total": 1.498,
+      "obitos": 73,
+      "recuperados": 1.359,
+      "internados":
+            {
+              "uti": 19,
+              "total": 66
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 6,
+       "descartados":  3.630,
+       "aguardamResultado": 120,
+       "internados":
+          {
+            "uti": 19,
+            "total": 58
+          }
+   }
+}

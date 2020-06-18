@@ -1,0 +1,26 @@
+{
+"data": "16-06-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-registra-1-940-casos-da-covid-19-e-84-mortes/",
+"confirmados":
+    {
+      "total": 1.940,
+      "obitos": 84,
+      "recuperados": 1.780,
+      "internados":
+            {
+              "uti": 27,
+              "total": 76
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 5,
+       "descartados": 5.280,
+       "aguardamResultado": 196,
+       "internados":
+          {
+            "uti": 17,
+            "total": 75
+          }
+   }
+}

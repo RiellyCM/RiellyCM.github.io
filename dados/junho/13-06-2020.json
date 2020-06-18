@@ -1,0 +1,26 @@
+{
+"data": "13-06-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/mortes-pelo-novo-coronavirus-chegam-a-76-em-sorocaba/",
+"confirmados":
+    {
+      "total": 1.737,
+      "obitos": 76,
+      "recuperados": 1.600,
+      "internados":
+            {
+              "uti": 17,
+              "total": 61
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 6,
+       "descartados":  3.975,
+       "aguardamResultado": 171,
+       "internados":
+          {
+            "uti": 23,
+            "total": 102
+          }
+   }
+}

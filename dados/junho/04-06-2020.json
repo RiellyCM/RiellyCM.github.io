@@ -1,0 +1,26 @@
+{
+"data": "04-06-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/casos-confirmados-de-covid-19-ultrapassam-1-200-em-sorocaba/",
+"confirmados":
+    {
+      "total": 1202,
+      "obitos": 56,
+      "recuperados": 1.093,
+      "internados":
+            {
+              "uti": 18,
+              "total": 53
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 9,
+       "descartados":  2.845,
+       "aguardamResultado": 91,
+       "internados":
+          {
+            "uti": 8,
+            "total": 31
+          }
+   }
+}

@@ -1,0 +1,26 @@
+{
+"data": "17-06-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/sorocaba-totaliza-2-159-casos-da-covid-19-e-87-mortes/",
+"confirmados":
+    {
+      "total": 2.159,
+      "obitos": 87,
+      "recuperados": 1.843,
+      "internados":
+            {
+              "uti": 26,
+              "total": 81
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 4,
+       "descartados": 5.695,
+       "aguardamResultado": 147,
+       "internados":
+          {
+            "uti": 16,
+            "total": 68
+          }
+   }
+}

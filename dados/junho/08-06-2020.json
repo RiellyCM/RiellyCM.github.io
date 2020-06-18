@@ -1,0 +1,26 @@
+{
+"data": "08-06-2020",
+"fonte": "http://noticias.sorocaba.sp.gov.br/seis-mortes-pela-covid-19-sao-registradas-em-sorocaba-nesta-segunda-feira/",
+"confirmados":
+    {
+      "total": 1333,
+      "obitos": 67,
+      "recuperados": 1.207,
+      "internados":
+            {
+              "uti": 16,
+              "total": 59
+            }
+    },
+"suspeitos":
+    {
+       "obitos": 7,
+       "descartados":  3.600,
+       "aguardamResultado": 118,
+       "internados":
+          {
+            "uti": 18,
+            "total": 59
+          }
+   }
+}
